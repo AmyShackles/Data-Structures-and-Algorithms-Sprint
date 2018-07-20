@@ -8,6 +8,9 @@ Add your answers to the questions below.
 
     I would think the space complexity for depth_first_for_each would be O(1) because you're only really looking at one item at a time and not necessarily storing it (because you don't need to know its value beyond what that means in terms of if you take the left or right branch)
 
+    Edited in lecture:
+    Nope, I was wrong. While it's true that there's no additional space made as a result of storage of information, it _is_ taking space just through the nature of the recursion, so O(n)
+
 3.  What is the runtime complexity of your `breadth_first_for_each` method?
 
     I would think the runtime complexity for breadth_first_for_each would also be O(n).
