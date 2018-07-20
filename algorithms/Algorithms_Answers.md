@@ -17,6 +17,24 @@ return max(arr[j] - arr[i])
 b) Can't. Prompt isn't giving a ratio of dropped eggs, just broken eggs. The solution for not having broken eggs is stop going to f floors and higher when you're a clumsy egg carrier.
 Really, this could be computed by trying a floor right around the middle of all the floors. If the egg breaks, go down the number of floors / 2. If the egg doesn't break, go up the number of floors / 2. Keep dividing by 2 until you find the optimal floor of egg breakage. I'm unable to put that into code in a short amount of time, but that's the heuristic I'd use.
 
+def egg_test (floors, current_floor, eggs):
+
+    floor_map = []
+    if current_floor > 1:
+        if eggs.break() = false:
+            # need to go farther down the building to find the break
+            if len(floor_map) > 0:
+                floor_map.pop(0)
+            current_floor = current_floor / 2
+            return egg_test(floors, current_floor, eggs)
+        else:
+            # check to see how high the breakage goes
+            floor_map.append(current_floor)
+            current_floor += floor / 2
+            return egg_test(floors, current_floor, eggs)
+    elif current_floor == 1:
+        return floor_map
+
 Exercise III:
 a) Running time of a quicksort where the pivot is the first element and it's an already sorted list is O(n^2) because it has to check literally every item in the array and change the pivot every time in order to check that it's sorted.
 
