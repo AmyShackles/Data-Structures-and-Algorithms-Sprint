@@ -2,7 +2,8 @@ Exercise I:
 
 a) I would say that this is O(n) as it's directly proportional to n input
 b) I would say this is probably O(log n) because you're effectively halving the size of the data every iteration
-c) This looks like it's going to be log(n^2) because it has nested for loops BUT when you run it with wildly different inputs, you get the same result and the same number of iterations, so I guess this is actually O(1). Oh! Because you're not ADDING to i, j, k when you do the comparisons. XD Always 63. XD
+c) This looks like it's going to be log(n^2) because it has nested for loops BUT when you run it with wildly different inputs, you get the same result and the same number of iterations, so I guess this is actually O(1). Oh! Because you're not ADDING to i, j, k when you do the comparisons. XD Always 63. XD  
+ in lecture: Oops, apparently O(sqr(n))
 d) I would say probably O(n^2) because you have to interact with 'n' \* 2 because of the nested for loop
 e) O(n^3) because of the nesting? Really kind of guessing here, if I'm honest.
 f) This is recursive, but from testing it, it looks like it only runs as many many times as whatever's given for 'n', so I'm going to go with O(n) for this one.
@@ -13,6 +14,7 @@ Exercise II:
 a) for i, j in arr:
 if j >= i:
 return max(arr[j] - arr[i])
+^^ Nope
 
 b) Can't. Prompt isn't giving a ratio of dropped eggs, just broken eggs. The solution for not having broken eggs is stop going to f floors and higher when you're a clumsy egg carrier.
 Really, this could be computed by trying a floor right around the middle of all the floors. If the egg breaks, go down the number of floors / 2. If the egg doesn't break, go up the number of floors / 2. Keep dividing by 2 until you find the optimal floor of egg breakage. I'm unable to put that into code in a short amount of time, but that's the heuristic I'd use.

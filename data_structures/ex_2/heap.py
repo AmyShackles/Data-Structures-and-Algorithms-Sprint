@@ -11,6 +11,7 @@ def heapsort(arr):
     # insert the return from heap.delete
     # to the first index of the sorted_list
     while heap.size > 0:
+        # sorted_list = [heap.delete()] + sorted
         sorted_list.insert(0, heap.delete())
     # return the sorted list
     return sorted_list
