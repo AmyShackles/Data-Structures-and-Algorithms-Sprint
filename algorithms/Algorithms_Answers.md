@@ -8,8 +8,21 @@ e) O(n^3) because of the nesting? Really kind of guessing here, if I'm honest.
 f) This is recursive, but from testing it, it looks like it only runs as many many times as whatever's given for 'n', so I'm going to go with O(n) for this one.
 g) This is also recursive and again from testing it, it looks like it only runs as many times as whatever the input is for 'n', so I'd go with O(n)
 
-Example code!
+Exercise II:
 
+a) for i, j in arr:
+if j >= i:
+return max(arr[j] - arr[i])
+
+b) Can't. Prompt isn't giving a ratio of dropped eggs, just broken eggs. The solution for not having broken eggs is stop going to f floors and higher when you're a clumsy egg carrier.
+Really, this could be computed by trying a floor right around the middle of all the floors. If the egg breaks, go down the number of floors / 2. If the egg doesn't break, go up the number of floors / 2. Keep dividing by 2 until you find the optimal floor of egg breakage. I'm unable to put that into code in a short amount of time, but that's the heuristic I'd use.
+
+Exercise III:
+a) Running time of a quicksort where the pivot is the first element and it's an already sorted list is O(n^2) because it has to check literally every item in the array and change the pivot every time in order to check that it's sorted.
+
+b) The average running time for a quicksort is O(n log n) but the best case is O(n) because best case in an equally distributed array is that it's always going to choose a pivot where it can do the operation needed to be done.
+
+Example code:
 Exercise I:
 a)
 Assume input 10!
