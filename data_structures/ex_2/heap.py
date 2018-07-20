@@ -1,5 +1,19 @@
 def heapsort(arr):
-    pass
+    # create a heap and assign it to a variable
+    heap = Heap()
+    # create an empty list to append to
+    sorted_list = []
+    # for every item in the array passed in as an argument,
+    # insert the item into the heap variable
+    for num in arr:
+        heap.insert(num)
+    # while the size of the heap is greater than 0,
+    # insert the return from heap.delete
+    # to the first index of the sorted_list
+    while heap.size > 0:
+        sorted_list.insert(0, heap.delete())
+    # return the sorted list
+    return sorted_list
 
 
 class Heap:
